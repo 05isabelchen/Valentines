@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Henry & Isabel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Borel&family=EB+Garamond:wght@500&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Pacifico&family=Poetsen+One&family=Racing+Sans+One&family=Rubik+Glitch&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Satisfy&family=Sigmar+One&family=Squada+One&family=Trade+Winds&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Main Constellation Map -->
+    <div class="constellation-map" id="main-map">
+        <canvas id="starfield"></canvas>
+        
+        <div class="page-title">
+            <h1>Henry & Isabel</h1>
+            <p>Click each star to unlock our memories</p>
+        </div>
+
+        <!-- Progress tracker -->
+        <div class="memory-counter">
+            <span id="unlocked-count">0</span> / <span id="total-count">17</span> Memories Unlocked
+        </div>
+
+        <!-- MAJOR MEMORY POINTS (Large Stars) -->
+        
+<!-- Memory 1 -->
+<div class="memory-point major locked" data-memory="1" data-type="major" style="left: 10%; top: 37%;">
+    <div class="star-glow"></div>
+    <div class="star-icon"></div>
+    <div class="memory-label">Meeting through DSS</div>
+    <div class="lock-icon">🔒</div>
+</div>
+
+<!-- Memory 2: Laufey Concert -->
+<div class="memory-point major locked" data-memory="2" data-type="major" style="left: 20%; top: 52%;">
+    <div class="star-glow"></div>
+    <div class="star-icon"></div>
+    <div class="memory-label">Laufey Concert</div>
+    <div class="lock-icon">🔒</div>
+</div>
+
+<!-- Memory 3: First Date -->
+<div class="memory-point major locked" data-memory="3" data-type="major" style="left: 30%; top: 32%;">
+    <div class="star-glow"></div>
+    <div class="star-icon"></div>
+    <div class="memory-label">First Date & Day Trip</div>
+    <div class="lock-icon">🔒</div>
+</div>
+
+<!-- Small Memory 1: Small Dates (Cooking, Fire Trails) -->
+<div class="memory-point small locked" data-memory="4" data-type="small" style="left: 17%; top: 80%;">
+    <div class="star-glow"></div>
+    <div class="star-icon"></div>
+    <div class="memory-label">Small Dates</div>
+    <div class="lock-icon">🔒</div>
+</div>
+
+<!-- Memory 4: First Double Date -->
+<div class="memory-point major locked" data-memory="5" data-type="major" style="left: 45%; top: 37%;">
+    <div class="star-glow"></div>
+    <div class="star-icon"></div>
+    <div class="memory-label">First Double Date</div>
+    <div class="lock-icon">🔒</div>
+</div>
+
+<!-- Memory 5: Being Official (Oct 27) -->
+<div class="memory-point major locked" data-memory="6" data-type="major" style="left: 50%; top: 57%;">
+    <div class="star-glow"></div>
+    <div class="star-icon"></div>
+    <div class="memory-label">Making it Official</div>
+    <div class="lock-icon">🔒</div>
+</div>
+
+<!-- Memory 6: Halloweekend -->
+<div class="memory-point major locked" data-memory="7" data-type="major" style="left: 45%; top: 72%;">
+    <div class="star-glow"></div>
+    <div class="star-icon"></div>
+    <div class="memory-label">Halloweekend</div>
+    <div class="lock-icon">🔒</div>
+</div>
+
+<!-- Small Memory 2: Studying in Doe -->
+<div class="memory-point small locked" data-memory="8" data-type="small" style="left: 60%; top: 42%;">
+    <div class="star-glow"></div>
+    <div class="star-icon"></div>
+    <div class="memory-label">Studying in Doe</div>
+    <div class="lock-icon">🔒</div>
+</div>
+
+<!-- Small Memory 3: Berkeley Project, SF Day -->
+<div class="memory-point small locked" data-memory="9" data-type="small" style="left: 35%; top: 60%;">
+    <div class="star-glow"></div>
+    <div class="star-icon"></div>
+    <div class="memory-label">Random Side Quests</div>
+    <div class="lock-icon">🔒</div>
+</div>
+
+<!-- Memory 7: Pleasanton, Meeting the Family -->
+<div class="memory-point major locked" data-memory="10" data-type="major" style="left: 60%; top: 62%;">
+    <div class="star-glow"></div>
+    <div class="star-icon"></div>
+    <div class="memory-label">Meeting the Family</div>
+    <div class="lock-icon">🔒</div>
+</div>
+
+<!-- Memory 8: Monkey King -->
+<div class="memory-point major locked" data-memory="11" data-type="major" style="left: 70%; top: 47%;">
+    <div class="star-glow"></div>
+    <div class="star-icon"></div>
+    <div class="memory-label">Monkey King</div>
+    <div class="lock-icon">🔒</div>
+</div>
+
+<!-- Small Memory 4: Dead Week Shenanigans -->
+<div class="memory-point small locked" data-memory="12" data-type="small" style="left: 65%; top: 82%;">
+    <div class="star-glow"></div>
+    <div class="star-icon"></div>
+    <div class="memory-label">Dead Week</div>
+    <div class="lock-icon">🔒</div>
+</div>
+
+<!-- Memory 9: Ice Skating Double Date -->
+<div class="memory-point major locked" data-memory="13" data-type="major" style="left: 75%; top: 67%;">
+    <div class="star-glow"></div>
+    <div class="star-icon"></div>
+    <div class="memory-label">Ice Skating</div>
+    <div class="lock-icon">🔒</div>
+</div>
+
+<!-- Memory 10: Henry in Maryland -->
+<div class="memory-point major locked" data-memory="14" data-type="major" style="left: 80%; top: 22%;">
+    <div class="star-glow"></div>
+    <div class="star-icon"></div>
+    <div class="memory-label">Maryland Visit</div>
+    <div class="lock-icon">🔒</div>
+</div>
+
+<!-- Memory 11: Long Distance -->
+<div class="memory-point major locked" data-memory="15" data-type="major" style="left: 90%; top: 72%;">
+    <div class="star-glow"></div>
+    <div class="star-icon"></div>
+    <div class="memory-label">Long Distance Love</div>
+    <div class="lock-icon">🔒</div>
+</div>
+
+        <!-- Connecting lines (SVG) -->
+        <svg class="constellation-lines" viewBox="0 0 100 100" preserveAspectRatio="none">
+    <!-- Major connections -->
+    <line class="connection-line major-line" x1="10%" y1="37%" x2="20%" y2="52%" />
+    <line class="connection-line major-line" x1="20%" y1="52%" x2="30%" y2="32%" />
+    <line class="connection-line major-line" x1="30%" y1="32%" x2="45%" y2="37%" />
+    <line class="connection-line major-line" x1="45%" y1="37%" x2="50%" y2="57%" />
+    <line class="connection-line major-line" x1="50%" y1="57%" x2="45%" y2="72%" />
+    <line class="connection-line major-line" x1="45%" y1="72%" x2="60%" y2="62%" />
+    <line class="connection-line major-line" x1="60%" y1="62%" x2="70%" y2="47%" />
+    <line class="connection-line major-line" x1="70%" y1="47%" x2="75%" y2="67%" />
+    <line class="connection-line major-line" x1="75%" y1="67%" x2="80%" y2="22%" />
+    <line class="connection-line major-line" x1="80%" y1="22%" x2="90%" y2="72%" />
+</svg>
+
+        <!-- Home button -->
+        <button class="home-btn hidden" id="home-btn">
+            <span>🏠</span> Back to Constellation
+        </button>
+
+        <!-- Music control toggle -->
+        <button class="music-toggle" id="music-toggle">
+            <span class="music-icon">🔊</span>
+        </button>
+    </div>
+
+    <!-- Memory Modal -->
+    <div class="memory-modal hidden" id="memory-modal">
+        <div class="modal-content">
+            <button class="close-btn" id="close-modal">×</button>
+            <div class="memory-content-wrapper" id="modal-body">
+                <!-- Content gets injected here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Memory Templates -->
+    
+<!-- Memory 1: Meeting through DSS -->
+<template id="memory-1-template">
+    <div class="memory-detail" data-music="romantic-piano.mp3">
+        <div class="memory-header">
+            <div class="memory-icon-large">✨</div>
+            <h2>Meeting Through DSS</h2>
+            <p class="memory-date">September 2025</p>
+        </div>
+        
+        <div class="unlock-challenge">
+            <p class="challenge-text">Catch 10 falling hearts in the basket! 💕</p>
+            <div class="heart-catching-game" id="heart-game">
+                <div class="game-score">Hearts Caught: <span id="hearts-caught">0</span> / 10</div>
+                <div class="game-area" id="heart-game-area">
+                    <div class="basket" id="basket">🧺</div>
+                </div>
+            </div>
+            <div class="feedback-message"></div>
+        </div>
+        
+        <div class="memory-story hidden unlocked-content">
+            <div class="image-carousel">
+                <div class="carousel-container">
+                    <button class="carousel-btn prev">‹</button>
+                    <div class="carousel-track">
+                        <div class="carousel-slide active">
+                            <img src="pictures/retreat.jpg" alt="Interview Photo">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="pictures/interview.jpg" alt="Text Photo 1">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="pictures/text1.jpg" alt="Text Photo 2">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="pictures/text2.PNG" alt="Text Photo 3">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="pictures/text3.jpg" alt="Text Photo 4">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="pictures/text4.jpg" alt="Text Photo 5">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="pictures/text5.jpg" alt="Text Photo 6">
+                        </div>
+                    </div>
+                    <button class="carousel-btn next">›</button>
+                </div>
+                <div class="carousel-dots">
+                    <span class="carousel-dot active"></span>
+                    <span class="carousel-dot"></span>
+                    <span class="carousel-dot"></span>
+                    <span class="carousel-dot"></span>
+                    <span class="carousel-dot"></span>
+                    <span class="carousel-dot"></span>
+                    <span class="carousel-dot"></span>
+                </div>
+            </div>
+            
+            <div class="story-text">
+                <p>When I saw your name show up in my email for the second time, I was surprised that you were about to interview me for the second time. Albeit, you already knew what I was thinking about the situation. But I am so grateful that we were paired together on accident again. I had such an amazing conversation with you, I thought about it so much afterwards. I would keep thinking about whether or not you enjoyed the conversation as much as I did. 
+                    After I got into the club and went to the newbie and exec social, I remember wanting to go up to you the whole time. I was so nervous to even talk to you. Even with every moment during the newbie welcome weeks, I wanted to talk to you as much as I could. I remember we talked about Hangzhou, F1, Chinese names, and hometowns. I would always overanalyze everything you'd do, how much eye contact you'd make, how often you'd talk to me compared to the other newbies, when you would sit next to me at the engineering library. 
+                    I remember I made sure all of my outfits were cute, my hair was looking good, had my best perfume on, and made sure my makeup was always done. I remember some of the newbie girls would compliment my outfits, which I was glad because I thought that maybe you'd like them too. Even with every game that we played, like the drawing ones, I would stare at you all the time. I would try to talk to you all the time, which I'm sure you could catch on. When I hosted the Summer I Turned Pretty watch party, I wanted you to be there so bad. I was surprised so many people even showed up, 
+                    but the one person that I wanted there, wasn't there. When we started watching KPop Demon Hunters, I really wanted to message you to invite you. I was so sad you weren't there and thought about you so much that night. 
+                    When we had that newbie hike social, that was the first time I really felt like you could actually like me. That was such a great night that I will always think about, where I knew that I wanted to be with you. I wanted to spend an eternity with you up there at the big C. It felt like we had spent so much time up there just talking and getting to know each other better. I liked you so much and I knew the club could also tell. Even during retreat, I was hoping you would talk to me 
+                    and spend more time talking. Every small moment we had during retreat I could not stop thinking about. When we were talking on the couch, talking outside on the patio, singing "Free" from Kpop Demon Hunters (the best song in the movie btw). Especially during hot seat, when you went up I was hoping there would be something about me. When they asked if you liked anyone in the club, I was really hoping it was me. I was hoping that you were also thinking about me as much as I was about you. When I went for hot seat, 
+                    I was so worried about what they would ask me when I was in the seat. I was scared they were going to expose me, make me seem so obvious about my feelings. When Collin invited me to go to Laufey with you guys,
+                    I jumped at the opportunity. It's crazy how the whole club knew about us before we did. I remember seeing Izzy taking a picture of us talking in my periphery. I remember Carol telling me that Phillip thought I was so obvious during retreat. But in all honesty, I was. But I'm so glad about how everything unfolded.
+                </p>
+                <p>Who knew this data science club would lead to this? Maybe you interviewing me twice was meant to be. I never would have thought that all of this would have happened. But I'm eternally grateful that it did.</p>
+                <div class="memory-stats">
+                    <div class="stat-box">
+                        <span class="stat-emoji">💻</span>
+                        <span class="stat-text">Being interviewed by you twice</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-emoji">🏔️</span>
+                        <span class="stat-text">Having the most amazing conversation at big C</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-emoji">✨</span>
+                        <span class="stat-text">The beginning of everything</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+    <!-- Memory 2: Laufey Concert -->
+    <template id="memory-2-template">
+        <div class="memory-detail" data-music="laufey-vibe.mp3">
+            <div class="memory-header">
+                <div class="memory-icon-large">🎵</div>
+                <h2>Laufey Concert</h2>
+                <p class="memory-date">September 29, 2025</p>
+            </div>
+            
+            <div class="unlock-challenge">
+                <p class="challenge-text">Match the Laufey songs to their lyrics!</p>
+                <div class="matching-game" id="laufey-matching">
+                    <div class="match-column">
+                        <div class="match-item song" data-id="bewitched">Bewitched</div>
+                        <div class="match-item song" data-id="valentine">Valentine</div>
+                        <div class="match-item song" data-id="lover">Lover Girl</div>
+                    </div>
+                    <div class="match-column">
+                        <div class="match-item lyric" data-id="valentine">"I've rejected affection..."</div>
+                        <div class="match-item lyric" data-id="bewitched">"Wrapped me in your arms..."</div>
+                        <div class="match-item lyric" data-id="lover">"This skyscrapper's causing vertigo..."</div>
+                    </div>
+                </div>
+                <div class="feedback-message"></div>
+            </div>
+            
+            <div class="memory-story hidden unlocked-content">
+                <div class="image-carousel">
+                    <div class="carousel-container">
+                        <button class="carousel-btn prev">‹</button>
+                        <div class="carousel-track">
+                        <div class="carousel-slide active">
+                            <img src="pictures/aquarium.jpg" alt="Interview Photo">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="pictures/laufey.jpg" alt="Text Photo 1">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="pictures/cello.jpg" alt="Text Photo 2">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="pictures/lovergirl.jpg" alt="Text Photo 3">
+                        </div>
+                    </div>
+                        <button class="carousel-btn next">›</button>
+                    </div>
+                    <div class="carousel-dots">
+                    <span class="carousel-dot active"></span>
+                    <span class="carousel-dot"></span>
+                    <span class="carousel-dot"></span>
+                    <span class="carousel-dot"></span>
+                </div>
+                </div>
+                
+                <div class="story-text">
+                    <p>I remember the day of the Laufey concert I was so scared to even message you or talk to you. I was trying to message Collin about when and where we were meeting because it felt a lot easier than messaging you. I was so excited to be going to that concert with you (and Collin I guess). I was texting Carol about how nervous I was to even be going to a concert with you. Butterflies in my stomach, dopey grin kind of nervous. I was planning my outfit and making sure that my outfit was perfect to make you think I was cute. I was so nervous about taking the uber with you and to not be too awkward. 
+                        I remember when we got to the concert and we were chatting and watching Suki Waterhouse, I really wanted to make a move on you and hold your hand. I put my head on your shoulder and I remember you calling me beautiful. I was so happy to know that you had reciprocated my feelings. When Laufey was about to come onto the stage, I made the move to hold your hand. I was so happy to finally be able to do that and not be worried about being weird. It was such a magical and beautiful experience to watch Laufey with you. It felt like the most romantic experience ever. I was so happy to be there with
+                        you can share this experience and it be the moment that brought us together.
+                    </p>
+                    <p>"You bewitched me from the first time that you kissed me"</p>
+                    <div class="concert-moments">
+                        <h4>Our Favorite Moments:</h4>
+                        <ul>
+                            <li>🎵 Singing Valentine and Lover Girl with you</li>
+                            <li>💫 That moment you called me beautiful</li>
+                            <li>🤝 When we held hands the entire concert, when you held me during the last song</li>
+                            <li>🌟 Walking out of the concert and confessing all of our feelings</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!-- Memory 3: First Date & Day Trip -->
+    <template id="memory-3-template">
+        <div class="memory-detail" data-music="upbeat-happy.mp3">
+            <div class="memory-header">
+                <div class="memory-icon-large">💕</div>
+                <h2>First Date & Day Trip Together</h2>
+                <p class="memory-date">Early October 2024</p>
+            </div>
+            
+            <div class="unlock-challenge">
+                <p class="challenge-text">Put our first date activities in the correct order!</p>
+                <div class="drag-sort-container" id="first-date-sort">
+                    <div class="sortable-item" data-order="3" draggable="true">
+                        <span class="drag-handle">☰</span>
+                        Got sniped by Lynn in camera duels
+                    </div>
+                    <div class="sortable-item" data-order="1" draggable="true">
+                        <span class="drag-handle">☰</span>
+                        You gave me flowers while I was on shift
+                    </div>
+                    <div class="sortable-item" data-order="4" draggable="true">
+                        <span class="drag-handle">☰</span>
+                        Had an amazing dinner with you
+                    </div>
+                    <div class="sortable-item" data-order="2" draggable="true">
+                        <span class="drag-handle">☰</span>
+                        Walked to Noodle Dynasty together
+                    </div>
+                </div>
+                <button class="unlock-submit-btn" id="check-date-order">Check Order</button>
+                <div class="feedback-message"></div>
+            </div>
+            
+            <div class="memory-story hidden unlocked-content">
+                <div class="image-carousel">
+                    <div class="carousel-container">
+                        <button class="carousel-btn prev">‹</button>
+                        <div class="carousel-track">
+                        <div class="carousel-slide active">
+                            <img src="pictures/aquarium.jpg" alt="Interview Photo">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="pictures/cameraduels.jpg" alt="Text Photo 1">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="pictures/japantown.jpg" alt="Text Photo 2">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="pictures/pizza.jpg" alt="Text Photo 3">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="pictures/bus.jpg" alt="Text Photo 4">
+                        </div>
+                    </div>
+                        <button class="carousel-btn next">›</button>
+                    </div>
+                    <div class="carousel-dots">
+                    <span class="carousel-dot active"></span>
+                    <span class="carousel-dot"></span>
+                    <span class="carousel-dot"></span>
+                    <span class="carousel-dot"></span>
+                    <span class="carousel-dot"></span>
+                </div>
+                </div>
+                
+                <div class="story-text">
+                    <p>When we had our first date I was so excited to (more officially) be going on dates and seeing each other. When you stopped by my MLK shift to bring me flowers I was so excited and happy that you did that, it was a very very pleasant surprise. It was also really funny to get reactions from everyone in the club about us. Especially when we went to Noodle Dynasty and got sniped by Lynn. I was so excited to go on our first official date together, I was actually telling Anirra all about it since we were on shift together. It was so incredibly fun to go on the date since it didn't feel like a first date. I was already very comfortable being with you, so it didn't feel scary. 
+                        I also remember we were chatting in MLK after for a long time and found out that we had so much in common already. I remember talking about Club Penguin, Animal Jam, books, practically everything. It was so fun to get to know you better and talk to you, it made me feel so comfortable with you. I remember chatting so long that MLK had to close and I wanted to just talk to you forever. I also loved making jokes with you, that was the day that we found out we both knew Rohan V (not B) and how we both hated him. By the end of that first dinner together, I knew that this was going to go very well.
+                    </p>
+                    <p>When we were planning our first day trip together, I was so excited to explore SF with you. I remember telling Amy all about it and she told me not to stay over at your place the night before the day trip to get you excited, which is exactly what I did LOL. I wanted to make sure that I looked really cute for you, which I always did. I was excited to see you and explore the city with you, walk through Pier 39, look at all of the touristy stuff with you. When we first went to Tony's Pizza, I was really disappointed that the pizza wasn't as good as the thin crust pizzas. I felt so bad that you didn't like it, but I know the next time we go you would really love it. I felt so happy to walk around with you and enjoy the experience with you.
+                        I remember we went to the aquarium, which ultimately was a little underwhelming. I had a great time just exploring the space with you and just being in your presence in general. It was so great to get to know you better and see how you were so fascinated by so much of the stuff in the aquarium. I also had a really great time walking around Japantown with you, learning more about you and hearing more of your stories. Especially when we saw the planes flying in the sky and saw it form a heart, that was so cute and perfect in the moment to see. It was such a fun time walking around and getting to know you better on a deeper level. I was so happy to be able to share this experience with you and feel like I could explore the world with you. 
+                    </p>
+                    <div class="date-highlights">
+                        <div class="highlight-item">
+                            <span class="highlight-icon">🍕</span>
+                            <p>Ate the most mid pizza ever!</p>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-icon">🐠</span>
+                            <p>Explored the aquarium and piers</p>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-icon">🌅</span>
+                            <p>Had the best first day trip with you</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!-- Small Memory 4: Small Dates (Cooking, Fire Trails) -->
+    <template id="memory-4-template">
+        <div class="memory-detail small-memory" data-music="cozy-acoustic.mp3">
+            <div class="memory-header">
+                <div class="memory-icon-large">🔥</div>
+                <h2>Small Dates Together</h2>
+                <p class="memory-date">October 2025</p>
+            </div>
+            
+            <div class="unlock-challenge">
+                <p class="challenge-text">Quick quiz! What was my favorite cooking date?</p>
+                <div class="choice-buttons">
+                    <button class="choice-btn" data-correct="false">Pizza</button>
+                    <button class="choice-btn" data-correct="true">Hotpot</button>
+                    <button class="choice-btn" data-correct="false">Pasta</button>
+                    <button class="choice-btn" data-correct="false">Stir fry</button>
+                    <button class="choice-btn" data-correct="false">Wontons</button>
+                    <button class="choice-btn" data-correct="false">None</button>
+                </div>
+                <div class="feedback-message"></div>
+            </div>
+            
+            <div class="memory-story hidden unlocked-content">
+                <div class="image-carousel">
+                    <div class="carousel-container">
+                        <button class="carousel-btn prev">‹</button>
+                        <div class="carousel-track">
+                        <div class="carousel-slide active">
+                            <img src="pictures/firetrails.jpg" alt="Interview Photo">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="pictures/hotpot.jpg" alt="Text Photo 1">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="pictures/hotpot2.jpg" alt="Text Photo 2">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="pictures/wonton.jpg" alt="Text Photo 3">
+                        </div>
+                    </div>
+                        <button class="carousel-btn next">›</button>
+                    </div>
+                    <div class="carousel-dots">
+                    <span class="carousel-dot active"></span>
+                    <span class="carousel-dot"></span>
+                    <span class="carousel-dot"></span>
+                    <span class="carousel-dot"></span>
+                </div>
+                </div>
+                
+                <div class="story-text">
+                    <p>One of my favorite dates and hangouts that we had was when we went to the fire trails in the middle of the night. I remember this was the night that I was supposed to finish one of my assignments (I think it was for 61B LOL). When we wanted to hike in the middle of the night, we had the idea to veo to Clark Kerr. It was such an exhilirating experience to go to Clark Kerr with you, especially when the veo wouldn't go up the hill and we had to run up with the veo. It was especially fun to go hiking up the trails and to look at the scenery and view from up high. I remember we were talking about where everything was, like Emeryville, Oakland, Berkeley Marina. 
+                        That was definitely one of my favorite hangouts that we did together. I was hoping you were going to ask me to be your girlfriend that night. Even though you didn't, I was still so happy that we shared that experience together. Even though the view of the city was beautiful, I had the most beautiful view right next to me. This spontaneous date was definitely one of my favorite dates that we did. 
+
+                    </p>
+                    <p>I also have so much fun when we cook in your apartment. When we were doing such a great job with the wontons until I accidentally added an entire head of ginger. When we were making hotpot for four days straight during dead week, and it was one of the best homemade hotpot I've ever made. When we tried to make pizza that one time and the fire alarm went off every two minutes. Even when everytime we cook together and everything that could go wrong goes wrong, it is still one of my favorite things to do with you. I love the messy kitchen, and the stress of the fire alarm, and the chewy steak. I love being able to share all of that with you, and instead of being upset about it, we can laugh about it together. 
+                        You help me to be grounded and not get too upset at trivial things. I've been a lot happier after being with you and even when I'm away from you, I still channel that mindset that you taught me. It feels like I could live the rest of my life with you, a lifetime of messy kitchens and bad cooking. But also a lifetime of romantic dinners and shared experiences. 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!-- Memory 5: First Double Date -->
+    <template id="memory-5-template">
+        <div class="memory-detail" data-music="fun-upbeat.mp3">
+            <div class="memory-header">
+                <div class="memory-icon-large">👥</div>
+                <h2>First Double Date</h2>
+                <p class="memory-date">October 2025</p>
+            </div>
+            
+            <div class="unlock-challenge">
+                <p class="challenge-text">Who were we on the double date with? (ex. Henry and Isabel)</p>
+                <div class="input-unlock">
+                    <input type="text" class="unlock-input" placeholder="Enter their names..." data-answer="Carol and Justin">
+                    <button class="unlock-submit-btn">Unlock</button>
+                </div>
+                <div class="feedback-message"></div>
+            </div>
+            
+            <div class="memory-story hidden unlocked-content">
+                <div class="image-carousel">
+                    <div class="carousel-container">
+                        <button class="carousel-btn prev">‹</button>
+                        <div class="carousel-track">
+                        <div class="carousel-slide active">
+                            <img src="pictures/funky.jpg" alt="Interview Photo">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="pictures/caroldouble.jpg" alt="Text Photo 1">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="pictures/henrydouble.jpg" alt="Text Photo 2">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="pictures/double.jpg" alt="Text Photo 3">
+                        </div>
+                    </div>
+                        <button class="carousel-btn next">›</button>
+                    </div>
+                    <div class="carousel-dots">
+                    <span class="carousel-dot active"></span>
+                    <span class="carousel-dot"></span>
+                    <span class="carousel-dot"></span>
+                    <span class="carousel-dot"></span>
+                </div>
+                </div>
+                
+                <div class="story-text">
+                    <p>Our first double date! It was so fun to be able to share this experience with Carol and Justin. I thought it was really fun to be able to be able to go on a double date and have fun with other another couple, especially my best friend at Berkeley. You looked so cute that day and I was so thankful that you are such an amazing boyfriend. It was really funny for Justin to teach you about the sidewalk rule and other boyfriend rules. I don't care too much if you follow them because it's not a big deal to be but it was really funny. 
+                        That night was also so fun because it was our first halloweekend joint club rager with 180 that semester. I was so grateful for you to help me talk to Carol and for you being so understanding that night. You are the most understanding and supportive boyfriend ever and I am eternally grateful that you were supportive of the situation and were willing to be friends with Justin. I know the situation was really rough and you were so accomodating and understanding. Thank you again for that night and for helping me a lot. 
+                    </p>
+                    <p>It made me feel a lot happier that we could hangout together and with Carol without it being awkward. It definitely brought more ease to my mind that you guys are able to get along. It also felt a lot more mature of a hangout than it would have if we were in high school which was also really reassuring. I had a great time that night and glad that we did it!</p>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!-- Memory 6: Being Official (October 27) -->
+    <template id="memory-6-template">
+        <div class="memory-detail" data-music="romantic-sweet.mp3">
+            <div class="memory-header">
+                <div class="memory-icon-large">❤️</div>
+                <h2>Making it official</h2>
+                <p class="memory-date">?</p>
+            </div>
+            
+            <div class="unlock-challenge">
+                <p class="challenge-text">What day did you ask me to be your girlfriend?</p>
+                <div class="choice-buttons">
+                    <button class="choice-btn" data-correct="false">September 27</button>
+                    <button class="choice-btn" data-correct="true">October 27</button>
+                    <button class="choice-btn" data-correct="false">October 31</button>
+                </div>
+                <div class="feedback-message"></div>
+            </div>
+            
+            <div class="memory-story hidden unlocked-content">
+                <div class="image-carousel">
+                    <div class="carousel-container">
+                        <button class="carousel-btn prev">‹</button>
+                        <div class="carousel-track">
+                        <div class="carousel-slide active">
+                            <img src="pictures/poster.jpg" alt="Interview Photo">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="pictures/flowers.jpg" alt="Text Photo 1">
+                        </div>
+                    </div>
+                        <button class="carousel-btn next">›</button>
+                    </div>
+                    <div class="carousel-dots">
+                    <span class="carousel-dot active"></span>
+                    <span class="carousel-dot"></span>
+                </div>
+                </div>
+                
+                <div class="story-text">
+                    <p>October 27th. The day that you asked me to be your girlfriend. I was so surprised when you asked me that night. I remember coming back from a lineage hangout and telling Jadyn that I was so annoyed you hadn't asked me yet. They kept telling me that you were going to plan something really good. Little did I know you had made the most perfect poster and asked me in the best way I could ever imagine. The poster was so funny and I loved it so much. I love that we have this inside joke together and how you made it into how you asked me. I remember during the girls only hangout, Jadyn asked me if there were any major updates and I told all the girls there that we were official now. I love telling the story to my friends and showing people the poster. 
+                        I couldn't have asked for a better way. I forever cherish that night and am so glad that you did it that way.
+                    </p>
+
+                    <div class="anniversary-box">
+                        <h4>Our Anniversary 💕</h4>
+                        <p class="big-date">October 27, 2025</p>
+                        <p>The day I became yours and you became mine</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!-- Memory 7: Halloweekend -->
+    <template id="memory-7-template">
+        <div class="memory-detail" data-music="spooky-fun.mp3">
+            <div class="memory-header">
+                <div class="memory-icon-large">🎃</div>
+                <h2>Halloweekend</h2>
+                <p class="memory-date">October 2025</p>
+            </div>
+            
+            <div class="unlock-challenge">
+    <p class="challenge-text">Match Patrick Bateman's iconic items! 🎴</p>
+    <div class="memory-card-game" id="memory-card-game">
+        <!-- Cards will be generated by JavaScript -->
+    </div>
+    <div class="game-score">Matches: <span id="matches-found">0</span> / 6</div>
+    <div class="feedback-message"></div>
+</div>
+            
+            <div class="memory-story hidden unlocked-content">
+                <div class="image-carousel">
+                    <div class="carousel-container">
+                        <button class="carousel-btn prev">‹</button>
+                        <div class="carousel-track">
+                        <div class="carousel-slide active">
+                            <img src="pictures/halloweekend.jpg" alt="Interview Photo">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="pictures/bunny.JPEG" alt="Text Photo 1">
+                        </div>
+                    </div>
+                        <button class="carousel-btn next">›</button>
+                    </div>
+                    <div class="carousel-dots">
+                    <span class="carousel-dot active"></span>
+                    <span class="carousel-dot"></span>
+                </div>
+                </div>
+                
+                <div class="story-text">
+                    <p>Our first halloweekend and couples costume. Although I was really sour about not doing the Pennywise and Georgie costume, I was really happy about how we did the bunny and magician costume together. The time that we hard launched the relationship and got the funniest reactions from our mutuals. I had such a fun time hanging out with Carol and her boyfriend too. It was funny to crack jokes and to go to a party together. Even though the DSS joint tech party was a little lame, and everyone was trying to leave to the frats. I'm glad that we were able to get into a frat and have fun together. 
+                        Even afterwards we were able to chill at my apartment and wait for forever for the wingstop that never came. It was such a fun time to experience that with you. Everything was so lighthearted and fun that it was my favorite spontaneous double date activity we did. I also thoroughly enjoyed the Malatang we got together the morning after. 
+                    </p>
+                    <p>It was our first holiday together as a couple, and it set the bar high for all the celebrations to come.</p>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!-- Small Memory 8: Studying in Doe -->
+    <template id="memory-8-template">
+        <div class="memory-detail small-memory" data-music="study-lofi.mp3">
+            <div class="memory-header">
+                <div class="memory-icon-large">📚</div>
+                <h2>Studying Together in Doe</h2>
+                <p class="memory-date">Fall 2025</p>
+            </div>
+            
+            <div class="unlock-challenge">
+                <p class="challenge-text">Where do I work for my job in Doe?</p>
+                <div class="choice-buttons">
+                    <button class="choice-btn" data-correct="false">Main Reading Room</button>
+                    <button class="choice-btn" data-correct="true">Talking floor</button>
+                    <button class="choice-btn" data-correct="false">Morrison Library</button>
+                    <button class="choice-btn" data-correct="false">Main Stacks</button>
+                </div>
+                <div class="feedback-message"></div>
+            </div>
+            
+            <div class="memory-story hidden unlocked-content">
+                <div class="image-carousel">
+                    <div class="carousel-container">
+                        <button class="carousel-btn prev">‹</button>
+                        <div class="carousel-track">
+                        <div class="carousel-slide active">
+                            <img src="pictures/doe.jpg" alt="Interview Photo">
+                        </div>
+                    </div>
+                        <button class="carousel-btn next">›</button>
+                    </div>
+                    <div class="carousel-dots">
+                    <span class="carousel-dot active"></span>
+                </div>
+                
+                <div class="story-text">
+                    <p>This was one of my favorite ways to be with you while also being productive. I know that you prefer to study in your apartment, but I get relly happy when you decide to study with me in Doe. Albeit, we're not always the most productive, but I still love being in your presence. I remember during the newbie welcome week, all the newbies went to go study at Doe. I remember you went to sit by yourself and i was really hoping you would come to sit with us when there was a seat open. Especially when there was a seat next to me. 
+                        I remember having the most deep and thoughtful conversations with you here. When we were starting off dating and I was incredibly unsure with how much I was willing to commit. You showed me how to show that commitment. Even though it is your first time in a serious relationship, it feels like my first time too. I know that one night that we were talking about what the relationship would look like during the spring semester, I honestly didn't think it was going to be that great. I didn't know what it could even look like because 
+                        I didn't like thinking that far ahead. The commitment scared me and I was scared about what to tell you. I know that I might've said a lot of hurtful stuff that night, but I want you to know now that I am fully committed to you. I am so incredibly happy to even be with you. you make my life so much better. I'm so happy you're visiting me during spring break and to be able to travel with you. It will be an adventure for sure.
+                    </p>
+                    <p>Even though we weren't the most productive, we've definitely had some of our deepest conversations there.</p>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!-- Small Memory 9: Berkeley Project, SF Day -->
+    <template id="memory-9-template">
+        <div class="memory-detail small-memory" data-music="city-vibes.mp3">
+            <div class="memory-header">
+                <div class="memory-icon-large">🌉</div>
+                <h2>Random Side Quests</h2>
+                <p class="memory-date">November 2025</p>
+            </div>
+            
+            <div class="unlock-challenge">
+                <p class="challenge-text">What did we eat in SF at the park?</p>
+                <div class="input-unlock">
+                    <input type="text" class="unlock-input" placeholder="Name of restaurant..." data-answer="Komeya No Bento">
+                    <button class="unlock-submit-btn">Unlock</button>
+                </div>
+                <div class="feedback-message"></div>
+            </div>
+            
+            <div class="memory-story hidden unlocked-content">
+                <div class="image-carousel">
+                    <div class="carousel-container">
+                        <button class="carousel-btn prev">‹</button>
+                        <div class="carousel-track">
+                        <div class="carousel-slide active">
+                            <img src="pictures/bp.jpg" alt="Interview Photo">
+                        </div>
+                        <div class="carousel-slide active">
+                            <img src="pictures/komeya.jpg" alt="Interview Photo">
+                        </div>
+                        <div class="carousel-slide active">
+                            <img src="pictures/ikea.jpg" alt="Interview Photo">
+                        </div>
+                        <div class="carousel-slide active">
+                            <img src="pictures/market.jpg" alt="Interview Photo">
+                        </div>
+                        <div class="carousel-slide active">
+                            <img src="pictures/hankki.jpg" alt="Interview Photo">
+                        </div>
+                    </div>
+                        <button class="carousel-btn next">›</button>
+                    </div>
+                    <div class="carousel-dots">
+                    <span class="carousel-dot active"></span>
+                    <span class="carousel-dot"></span>
+                    <span class="carousel-dot"></span>
+                    <span class="carousel-dot"></span>
+                    <span class="carousel-dot"></span>
+
+                </div>
+                
+                <div class="story-text">
+                    <p>Another one of my favorite things to do with you is to be spontaneous with you. While SF day trips and Berkeley Project were not spontaneous activities, those activities were pleasantly surprising. I loved having a picnic with you at that park near the place we got the sushi. I loved exploring the city with you again. I also remember when we were running late for Berkeley Project and when we got out of the uber in front of the whole club. Very slick!
+                        I remember having the best nap with you ever and getting malatang that night. I also really loved going to Ikea with you, even though we felt super sick after eating the meatballs, it was so fun to go around the furniture and talking about which ones we liked. It felt like we were shopping for our now home. (I also really liked when we were getting freaky in the closet). The white marble cabinets, the homey living room look. I could already see what our future will look like. I also appreciated you so much for letting me sleep on the bus and letting me sleep more when we got to your apartment while you made me dinner. 
+                        You have always known to look out for me and I appreciate you so much for always doing that for me. You take care of me in the best way and have always made me feel cared for and special. 
+                        I also really loved when we decided to go to the Berkeley botannical garden, even though we were feeling really drousy that day, and that car ride to the garden was making us nauseous. I loved walking around the garden with you, hearing about everything you know about plants. I also loved just looking at the greenry with you and just walking around with you. It feels really intimate to be with you and clutch onto your arm. I love just chatting with you and spending time with you in nature. I feel like we can have the most random conversations and it still being really fun.
+                        I remember when I wanted to get Hankki and you were being really understanding and supportive of me. I appreciate you so much for being patient with me and for always knowing when I'm upset. Thank you for being the most amazing person ever and most understanding. Thank you for always listening to me and wanting to make me happy.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!-- Memory 10: Pleasanton, Meeting the Family -->
+    <template id="memory-10-template">
+        <div class="memory-detail" data-music="warm-family.mp3">
+            <div class="memory-header">
+                <div class="memory-icon-large">🏠</div>
+                <h2>Meeting the Family in Pleasanton</h2>
+                <p class="memory-date">November 2025</p>
+            </div>
+            
+            <div class="unlock-challenge">
+                <p class="challenge-text">How nervous was I to meet your family</p>
+                <div class="slider-unlock">
+                    <input type="range" min="1" max="10" value="5" class="nervousness-slider" id="nervousness">
+                    <div class="slider-value">Level: <span id="nervousness-value">10</span></div>
+                    <button class="unlock-submit-btn" id="check-nervousness">That's about right!</button>
+                </div>
+                <div class="feedback-message"></div>
+            </div>
+            
+            <div class="memory-story hidden unlocked-content">
+                <div class="image-carousel">
+                    <div class="carousel-container">
+                        <button class="carousel-btn prev">‹</button>
+                        <div class="carousel-track">
+                        <div class="carousel-slide active">
+                            <img src="pictures/pleasanton.jpg" alt="Interview Photo">
+                        </div>
+                        <div class="carousel-slide active">
+                            <img src="pictures/ptown.jpg" alt="Interview Photo">
+                        </div>
+                        <div class="carousel-slide active">
+                            <img src="pictures/ptown2.jpg" alt="Interview Photo">
+                        </div>
+                        <div class="carousel-slide active">
+                            <img src="pictures/henny.jpg" alt="Interview Photo">
+                        </div>
+                    </div>
+                        <button class="carousel-btn next">›</button>
+                    </div>
+                    <div class="carousel-dots">
+                    <span class="carousel-dot active"></span>
+                    <span class="carousel-dot"></span>
+                    <span class="carousel-dot"></span>
+                    <span class="carousel-dot"></span>
+
+                </div>
+                </div>
+                
+                <div class="story-text">
+                    <p>Even though I have already visited Pleasanton with Carol, it was really cool to visit Pleasanton from a different perspective. It felt like you and Carol lived in two different versions of Pleasanton. I had an amazing time walking around your high school and learning more about you. It was so fun to learn more about the historic parts of Pleasanton and the naturey parts. The creek was such a peaceful and great place to walk around. Even though it was a long train ride, I was just super excited to have a day trip in Pleasanton. </p>
+                    <p>Watching you laugh with my parents, seeing you relax and be yourself, it made me realize how serious this was for me. You weren't just meeting my family; you were becoming part of it.</p>
+                    <div class="family-notes">
+                        <p>💕 My mom said you're a keeper</p>
+                        <p>👍 My dad actually smiled (that's rare)</p>
+                        <p>✨ You made everyone feel comfortable</p>
+                        <p>🏠 It felt like you belonged there</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!-- Memory 11: Monkey King -->
+    <template id="memory-11-template">
+        <div class="memory-detail" data-music="adventure-theme.mp3">
+            <div class="memory-header">
+                <div class="memory-icon-large">👑</div>
+                <h2>Monkey King Adventure</h2>
+                <p class="memory-date">November 2025</p>
+            </div>
+            
+            <div class="unlock-challenge">
+                <p class="challenge-text">What did we do after watching Monkey King?</p>
+                <div class="choice-buttons">
+                    <button class="choice-btn" data-correct="false">Went home immediately</button>
+                    <button class="choice-btn" data-correct="true">Got food and walked around</button>
+                    <button class="choice-btn" data-correct="false">Watched another movie</button>
+                </div>
+                <div class="feedback-message"></div>
+            </div>
+            
+            <div class="memory-story hidden unlocked-content">
+                <div class="image-carousel">
+                    <div class="carousel-container">
+                        <button class="carousel-btn prev">‹</button>
+                        <div class="carousel-track">
+                        <div class="carousel-slide active">
+                            <img src="pictures/mk1.jpg" alt="Interview Photo">
+                        </div>
+                        <div class="carousel-slide active">
+                            <img src="pictures/mk2.jpg" alt="Interview Photo">
+                        </div>
+                    </div>
+                        <button class="carousel-btn next">›</button>
+                    </div>
+                    <div class="carousel-dots">
+                    <span class="carousel-dot active"></span>
+                    <span class="carousel-dot"></span>
+
+                </div>
+                </div>
+                
+                <div class="story-text">
+                    <p>Movie night watching Monkey King! You kept whispering commentary throughout (which I secretly loved), sharing popcorn, your head on my shoulder. Even though the movie was about an epic journey, I was more focused on our own journey together.</p>
+                    <p>Walking around afterward, reenacting scenes and laughing at each other's terrible impressions - it's these simple date nights that I cherish the most.</p>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!-- Small Memory 12: Dead Week Shenanigans -->
+    <template id="memory-12-template">
+        <div class="memory-detail small-memory" data-music="chill-study.mp3">
+            <div class="memory-header">
+                <div class="memory-icon-large">😴</div>
+                <h2>Dead Week Shenanigans</h2>
+                <p class="memory-date">December 2025</p>
+            </div>
+            
+            <div class="unlock-challenge">
+                <p class="challenge-text">How many study breaks did we actually take?</p>
+                <div class="choice-buttons">
+                    <button class="choice-btn" data-correct="false">2-3 (we were productive!)</button>
+                    <button class="choice-btn" data-correct="false">5-7 (reasonable)</button>
+                    <button class="choice-btn" data-correct="true">Too many to count</button>
+                </div>
+                <div class="feedback-message"></div>
+            </div>
+            
+            <div class="memory-story hidden unlocked-content">
+                <div class="image-carousel">
+                    <div class="carousel-container">
+                        <button class="carousel-btn prev">‹</button>
+                        <div class="carousel-track">
+                        <div class="carousel-slide active">
+                            <img src="pictures/prom.JPG" alt="Interview Photo">
+                        </div>
+                        <div class="carousel-slide active">
+                            <img src="pictures/campanile.jpg" alt="Interview Photo">
+                        </div>
+                        <div class="carousel-slide active">
+                            <img src="pictures/banquet.jpg" alt="Interview Photo">
+                        </div>
+                        <div class="carousel-slide active">
+                            <img src="pictures/teagarden.jpg" alt="Interview Photo">
+                        </div>
+                        <div class="carousel-slide active">
+                            <img src="pictures/apartment.jpg" alt="Interview Photo">
+                        </div>
+                        <div class="carousel-slide active">
+                            <img src="pictures/deadweek.jpg" alt="Interview Photo">
+                        </div>
+                    </div>
+                        <button class="carousel-btn next">›</button>
+                    </div>
+                    <div class="carousel-dots">
+                    <span class="carousel-dot active"></span>
+                    <span class="carousel-dot"></span>
+                    <span class="carousel-dot"></span>
+                    <span class="carousel-dot"></span>
+                    <span class="carousel-dot"></span>
+                    <span class="carousel-dot"></span>
+                </div>
+                </div>
+                
+                <div class="story-text">
+                    <p>Dead week - when studying was supposed to happen but mostly we just kept each other company while pretending to be productive. Your stress snacks, my terrible study playlist, us convincing each other that "just one more break" was fine.</p>
+                    <p>We may not have aced all our exams, but we aced being there for each other.</p>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!-- Memory 13: Ice Skating Double Date -->
+    <template id="memory-13-template">
+        <div class="memory-detail" data-music="winter-fun.mp3">
+            <div class="memory-header">
+                <div class="memory-icon-large">⛸️</div>
+                <h2>Ice Skating Double Date</h2>
+                <p class="memory-date">December 2025</p>
+            </div>
+            
+            <div class="unlock-challenge">
+                <p class="challenge-text">How many times did we fall on the ice?</p>
+                <div class="counter-game">
+                    <button class="counter-btn" id="counter-down">-</button>
+                    <div class="counter-display" id="fall-counter">0</div>
+                    <button class="counter-btn" id="counter-up">+</button>
+                </div>
+                <button class="unlock-submit-btn" id="check-falls">Check Answer</button>
+                <div class="feedback-message"></div>
+            </div>
+            
+            <div class="memory-story hidden unlocked-content">
+                <div class="image-carousel">
+                    <div class="carousel-container">
+                        <button class="carousel-btn prev">‹</button>
+                        <div class="carousel-track">
+                        <div class="carousel-slide active">
+                            <img src="pictures/skate.JPG" alt="Interview Photo">
+                        </div>
+                        <div class="carousel-slide active">
+                            <img src="pictures/skating.jpg" alt="Interview Photo">
+                        </div>
+                        <div class="carousel-slide active">
+                            <img src="pictures/hotel.jpg" alt="Interview Photo">
+                        </div>
+                        <div class="carousel-slide active">
+                            <img src="pictures/hotel2.jpg" alt="Interview Photo">
+                        </div>
+                    </div>
+                        <button class="carousel-btn next">›</button>
+                    </div>
+                    <div class="carousel-dots">
+                    <span class="carousel-dot active"></span>
+                    <span class="carousel-dot"></span>
+                    <span class="carousel-dot"></span>
+                    <span class="carousel-dot"></span>
+                </div>
+                </div>
+                
+                <div class="story-text">
+                    <p>Ice skating! Neither of us were experts (understatement), but that made it even more fun. Holding onto each other for dear life, laughing every time one of us slipped, racing our friends and losing spectacularly.</p>
+                    <p>The hot cocoa afterward, our frozen fingers intertwined, everyone's faces red from the cold and laughter - perfect winter memory.</p>
+                    <div class="ice-skating-stats">
+                        <div class="stat">🧊 Times fallen: Too many</div>
+                        <div class="stat">😂 Times laughed: Even more</div>
+                        <div class="stat">☕ Hot cocoas consumed: 3</div>
+                        <div class="stat">💕 Perfect date: Yes</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!-- Memory 14: Henry in Maryland -->
+    <template id="memory-14-template">
+        <div class="memory-detail" data-music="travel-adventure.mp3">
+            <div class="memory-header">
+                <div class="memory-icon-large">✈️</div>
+                <h2>Henry's Visit to Maryland</h2>
+                <p class="memory-date">Winter Break 2025</p>
+            </div>
+            
+            <div class="unlock-challenge">
+                <p class="challenge-text">Put these Maryland activities in order!</p>
+                <div class="drag-sort-container" id="maryland-sort">
+                    <div class="sortable-item" data-order="3" draggable="true">
+                        <span class="drag-handle">☰</span>
+                        Explored local spots
+                    </div>
+                    <div class="sortable-item" data-order="1" draggable="true">
+                        <span class="drag-handle">☰</span>
+                        Picked you up from airport
+                    </div>
+                    <div class="sortable-item" data-order="4" draggable="true">
+                        <span class="drag-handle">☰</span>
+                        Sad airport goodbye
+                    </div>
+                    <div class="sortable-item" data-order="2" draggable="true">
+                        <span class="drag-handle">☰</span>
+                        Spent time with family
+                    </div>
+                </div>
+                <button class="unlock-submit-btn" id="check-maryland-order">Check Order</button>
+                <div class="feedback-message"></div>
+            </div>
+            
+            <div class="memory-story hidden unlocked-content">
+                <div class="image-carousel">
+                    <div class="carousel-container">
+                        <button class="carousel-btn prev">‹</button>
+                        <div class="carousel-track">
+                        <div class="carousel-slide active">
+                            <img src="pictures/capitol.jpg" alt="Interview Photo">
+                        </div>
+                        <div class="carousel-slide active">
+                            <img src="pictures/georgetown.jpg" alt="Interview Photo">
+                        </div>
+                        <div class="carousel-slide active">
+                            <img src="pictures/maryland.jpg" alt="Interview Photo">
+                        </div>
+                        <div class="carousel-slide active">
+                            <img src="pictures/metro.jpg" alt="Interview Photo">
+                        </div>
+                        <div class="carousel-slide active">
+                            <img src="pictures/monument.jpg" alt="Interview Photo">
+                        </div>
+                        <div class="carousel-slide active">
+                            <img src="pictures/trail.jpg" alt="Interview Photo">
+                        </div>
+                        <div class="carousel-slide active">
+                            <img src="pictures/ramen.jpg" alt="Interview Photo">
+                        </div>
+                    </div>
+                        <button class="carousel-btn next">›</button>
+                    </div>
+                    <div class="carousel-dots">
+                    <span class="carousel-dot active"></span>
+                    <span class="carousel-dot"></span>
+                    <span class="carousel-dot"></span>
+                    <span class="carousel-dot"></span>
+                    <span class="carousel-dot"></span>
+                    <span class="carousel-dot"></span>
+                </div>
+                </div>
+                
+                <div class="story-text">
+                    <p>You flew all the way to Maryland to see me during winter break. Seeing you at the airport, that moment felt surreal - like, wow, you really came all this way just for us.</p>
+                    <p>Showing you my hometown, introducing you to more of my family, experiencing Maryland winter together - every moment was precious because we knew time was limited. The goodbye at the airport was so hard, but it proved that distance is just a number when you care about someone this much.</p>
+                    <div class="maryland-memories">
+                        <h4>Highlights from Your Visit:</h4>
+                        <ul>
+                            <li>✈️ Your face when you got off the plane</li>
+                            <li>🏠 Making yourself at home in my hometown</li>
+                            <li>❄️ Your first real East Coast winter</li>
+                            <li>👨‍👩‍👧‍👦 My family falling in love with you</li>
+                            <li>💔 The hardest airport goodbye ever</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!-- Memory 15: Long Distance (Final) -->
+    <template id="memory-15-template">
+        <div class="memory-detail final-memory" data-music="emotional-piano.mp3">
+            <div class="memory-header">
+                <div class="memory-icon-large">💝</div>
+                <h2>Long Distance Love</h2>
+                <p class="memory-date">Spring 2026</p>
+            </div>
+            
+            <div class="unlock-challenge">
+                <p class="challenge-text">This memory unlocks after exploring all others.</p>
+                <div class="unlock-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="final-progress"></div>
+                    </div>
+                    <p class="progress-text"><span id="memories-unlocked">0</span>/14 memories explored</p>
+                </div>
+                <div class="feedback-message"></div>
+            </div>
+            
+            <div class="memory-story hidden unlocked-content">
+                <div class="image-carousel">
+                    <div class="carousel-container">
+                        <button class="carousel-btn prev">‹</button>
+                        <div class="carousel-track">
+                        <div class="carousel-slide active">
+                            <img src="pictures/discord.jpg" alt="Interview Photo">
+                        </div>
+                        <div class="carousel-slide active">
+                            <img src="pictures/roblox.jpg" alt="Interview Photo">
+                        </div>
+                        </div>
+                    </div>
+                        <button class="carousel-btn next">›</button>
+                    </div>
+                    <div class="carousel-dots">
+                    <span class="carousel-dot active"></span>
+                    <span class="carousel-dot"></span>
+                </div>
+                </div>
+                
+                <div class="valentine-letter">
+                    <div class="letter-content">
+                        <p class="opening">My love,</p>
+                        
+                        <p>As I look back at every memory in our constellation - from that first meeting at DSS to navigating the challenges of long distance - I'm overwhelmed with gratitude and love.</p>
+                        
+                        <p>This distance has been hard. The late-night video calls, counting down days until we see each other again, missing the simple things like holding your hand or seeing your smile in person. But you know what? It's made me more certain than ever.</p>
+                        
+                        <p>Every star in our constellation represents a moment I fell deeper in love with you. Your laugh during the Laufey concert. Your nervous excitement meeting my family. Your determination during dead week. Your adventurous spirit on our first date. Every single moment, from the major milestones to the smallest memories, has shown me that you're the one.</p>
+                        
+                        <p class="highlight">Distance means so little when someone means so much.</p>
+                        
+                        <p>Thank you for the late-night study sessions, the spontaneous adventures, the comfort food dates, and the deep conversations. Thank you for being patient with me, for making me laugh when I'm stressed, for being my partner in everything.</p>
+                        
+                        <p>Thank you for choosing me every single day, even when it's hard. Thank you for making me believe that love stories like ours really do exist.</p>
+                        
+                        <p>This Valentine's Day, I want you to know: every mile between us, every timezone, every day apart - it's all worth it. Because it's you. It's us. It's this beautiful, imperfect, wonderful story we're writing together.</p>
+                        
+                        <p class="highlight">I love you more than all the stars in our constellation. And I can't wait to add more to it.</p>
+                        
+                        <p class="closing">Forever and always yours,</p>
+                        <div class="signature">
+                            <p class="signature-heart">❤️ Isabel</p>
+                        </div>
+                    </div>
+                    
+                    <div class="our-stats">
+                        <h3>Our Story in Numbers</h3>
+                        <div class="stat-grid-final">
+                            <div class="stat">
+                                <div class="stat-num">103</div>
+                                <div class="stat-label">Days Together</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-num">15</div>
+                                <div class="stat-label">Memories Unlocked</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-num">∞</div>
+                                <div class="stat-label">More To Come</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-num">1</div>
+                                <div class="stat-label">You ❤️</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="final-message">
+                        <p>Happy Valentine's Day, my love. Here's to every memory we've made, and every star we'll add to our constellation. 💕</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!-- Heart Game Modal (appears before Memory 1) -->
+<!-- Heart Game Modal (appears before Memory 1) -->
+<div class="game-modal hidden" id="heart-game-modal">
+    <div class="modal-content">
+        <h2>🎮 Catch the Hearts!</h2>
+        <p class="challenge-text">Catch 10 falling hearts to unlock this memory! 💕</p>
+        <div class="heart-catching-game">
+            <div class="game-score">Hearts Caught: <span id="game-hearts-caught">0</span> / 10</div>
+            <div class="game-area" id="game-heart-area">
+                <div class="basket" id="game-basket">🧺</div>
+            </div>
+        </div>
+        <div class="feedback-message" id="game-feedback"></div>
+    </div>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
