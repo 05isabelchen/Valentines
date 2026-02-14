@@ -356,7 +356,7 @@ function setupChallenge(memoryId) {
             setupChoiceChallenge();
             break;
         case 13:
-            setupCounterChallenge();
+            setupChoiceChallenge();
             break;
         case 14:
             setupDragSortChallenge();
